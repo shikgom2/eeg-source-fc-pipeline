@@ -1,0 +1,21 @@
+# Data / pipeline outputs (large binary files, not for git)
+outputs/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.matplotlib/
+
+# Environment
+.env
+venv/
+.venv/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/

@@ -1,0 +1,12 @@
+mne
+mne-connectivity
+mne-icalabel
+numpy
+pandas
+scipy
+matplotlib
+seaborn
+openpyxl
+nibabel
+networkx
+python-louvain
