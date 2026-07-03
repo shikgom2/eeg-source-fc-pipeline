@@ -69,7 +69,8 @@ def compute_aec_c(data: np.ndarray, low: float, high: float) -> np.ndarray:
             amp_orth_std = amp_orth.std(axis=1)
 
             cov = (amp_c[i][None, :] * amp_orth_c).mean(axis=1)
-            corr = cov / (amp_std[i] * amp_orth_std + 1e-12)
+            denom = amp_std[i] * amp_orth_std
+            corr = np.where(denom > 1e-30, cov / denom, 0.0)
             mat_sum[i, :] += corr
 
     mat = mat_sum / n_epochs
